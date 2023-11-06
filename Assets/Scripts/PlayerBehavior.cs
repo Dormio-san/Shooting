@@ -22,8 +22,8 @@ public class PlayerBehavior : MonoBehaviour
     {
         speed = 4f;
         horizontalScreenLimit = 9.5f;
-        middleScreen = -2.5f;
-        bottomScreen = 0.5f;
+        middleScreen = 0.5f;
+        bottomScreen = -2.5f;
     }
 
     // Update is called once per frame; if your computer runs at 60 fps
@@ -47,11 +47,11 @@ public class PlayerBehavior : MonoBehaviour
             transform.position = new Vector3(horizontalScreenLimit, transform.position.y, 0);
         }
 
-        if (transform.position.y >= middleScreenLimit)
+        if (transform.position.y > -middleScreenLimit)
         {
             transform.position = new Vector3(transform.position.x, middleScreenLimit, 0);
         }
-        else if (transform.position.y <= bottomScreenLimit)
+        else if (transform.position.y < -bottomScreenLimit)
         {
             transform.position = new Vector3(transform.position.x, bottomScreenLimit, 0);
         }
