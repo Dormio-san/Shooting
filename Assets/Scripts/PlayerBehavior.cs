@@ -22,8 +22,8 @@ public class PlayerBehavior : MonoBehaviour
     {
         speed = 4f;
         horizontalScreenLimit = 9.5f;
-        middleScreen = -2.5f;
-        bottomScreen 0.5f; =
+        middleScreen = 0.5f;
+        bottomScreen = -2.5f;
     }
 
     // Update is called once per frame; if your computer runs at 60 fps
