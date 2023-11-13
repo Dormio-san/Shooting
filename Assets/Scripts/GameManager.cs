@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject EnemyOnePrefab;
     public GameObject EnemyTwoPrefab;
+    public GameObject CoinPrefab;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI livesText;
     public int score;
@@ -17,6 +18,7 @@ public class GameManager : MonoBehaviour
     {
         InvokeRepeating("CreateEnemyOne", 1.0f, 3.0f);
         InvokeRepeating("CreateEnemyTwo", 2.0f, 5.0f);
+        InvokeRepeating("CreateCoin", 1.0f, 15.0f);
         score = 0;
         scoreText.text = "score: " + score;
     }
@@ -35,6 +37,11 @@ public class GameManager : MonoBehaviour
     void CreateEnemyTwo()
     {
         Instantiate(EnemyTwoPrefab, new Vector3(Random.Range(-8, 8), 7, 0), Quaternion.identity);
+    }
+
+    void CreateCoin()
+    {
+        Instantiate(CoinPrefab, new Vector3(Random.Range(-8, 8), 7, 0), Quaternion.identity);
     }
 
     public void GameOver()

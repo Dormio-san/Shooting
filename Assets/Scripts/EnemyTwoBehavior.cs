@@ -18,6 +18,10 @@ public class EnemyTwoBehavior : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        if (transform.position.x > 9.5f)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D whatIHit)
@@ -31,7 +35,7 @@ public class EnemyTwoBehavior : MonoBehaviour
         {
             Destroy(whatIHit.gameObject);
             Destroy(this.gameObject);
-            GameObject.Find("GameManager").GetComponent<GameManager>().EarnScore(2);
+            GameObject.Find("GameManager").GetComponent<GameManager>().EarnScore(1);
         }
     }
 }
