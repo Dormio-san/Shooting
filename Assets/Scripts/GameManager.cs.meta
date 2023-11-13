@@ -6,7 +6,6 @@ MonoImporter:
   defaultReferences:
   - EnemyOnePrefab: {fileID: 7496859743628959043, guid: 8a117eb6b7de64daf95cca851d86b191, type: 3}
   - EnemyTwoPrefab: {fileID: 7496859743628959043, guid: aaf12adf2e1ef4c2b81614b5e469b598, type: 3}
-  - CoinPrefab: {fileID: 7496859743628959043, guid: ccaf85d0f10df45e5aca6096a11b7dcf, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
