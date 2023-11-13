@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyOneBehavior : MonoBehaviour
 {
+    public GameObject explosionPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,7 +14,7 @@ public class EnemyOneBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(new Vector3(0, -1, 0) * Time.deltaTime * 3);
+        transform.Translate(new Vector3(0, -2, 0) * Time.deltaTime * 2);
         if (transform.position.y < -8f)
         {
             Destroy(this.gameObject);
@@ -24,6 +25,7 @@ public class EnemyOneBehavior : MonoBehaviour
     {
         if(whatIHit.tag == "Player")
         {
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             whatIHit.GetComponent<PlayerBehavior>().LoseLife();
             Destroy(this.gameObject);
         }
@@ -32,6 +34,7 @@ public class EnemyOneBehavior : MonoBehaviour
             Destroy(whatIHit.gameObject);
             Destroy(this.gameObject);
             GameObject.Find("GameManager").GetComponent<GameManager>().EarnScore(2);
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         }
     }
 }
