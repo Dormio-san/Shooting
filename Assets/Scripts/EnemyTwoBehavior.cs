@@ -27,7 +27,7 @@ public class EnemyTwoBehavior : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D whatIHit)
     {
-        if (whatIHit.tag == "Player")
+        if(whatIHit.tag == "Player")
         {
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             whatIHit.GetComponent<PlayerBehavior>().LoseLife();
