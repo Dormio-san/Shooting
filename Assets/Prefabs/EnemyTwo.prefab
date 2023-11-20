@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3301652394533895023}
   m_Layer: 0
   m_Name: EnemyTwo
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cae18320f006945ee83a30ec75aa512f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionPrefab: {fileID: 0}
+  explosionPrefab: {fileID: 3435687088055616659, guid: dd9bae4e891424abc9e27a59489581a8, type: 3}
 --- !u!61 &3418647225936758121
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -13,22 +13,13 @@ public class ShieldBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(new Vector3(1, -2, 0) * Time.deltaTime * 1);
-        if (transform.position.y < -8f)
-        {
-            Destroy(this.gameObject);
-        }
-        if (transform.position.x < -9.5f)
-        {
-            Destroy(this.gameObject);
-        }
+        
     }
-    private void OnTriggerEnter2D(Collider2D whatIHit)
-    {    
-        if(whatIHit.tag == "Player")
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (other.CompareTag("Enemy"))
         {
-            GameObject.Find("GameManager").GetComponent<GameManager>().EarnScore(1);
-            Destroy(this.gameObject);
+            Destroy(other.gameObject);
+            this.gameObject.SetActive(false);
         }
     }
 }

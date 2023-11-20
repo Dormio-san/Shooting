@@ -9,10 +9,13 @@ public class GameManager : MonoBehaviour
     public GameObject EnemyOnePrefab;
     public GameObject EnemyTwoPrefab;
     public GameObject CoinPrefab;
-    public GameObject ShieldPrefab;
+    public GameObject PowerUpPrefab;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI livesText;
     public int score;
+
+    [SerializeField]
+    private GameObject Shield;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +23,7 @@ public class GameManager : MonoBehaviour
         InvokeRepeating("CreateEnemyOne", 1.0f, 3.0f);
         InvokeRepeating("CreateEnemyTwo", 2.0f, 5.0f);
         InvokeRepeating("CreateCoin", 1.0f, 15.0f);
-        InvokeRepeating("CreateShield", 3.0f, 30.0f);
+        InvokeRepeating("CreatePowerUp", 3.0f, 30.0f);
         score = 0;
         scoreText.text = "score: " + score;
     }
@@ -46,9 +49,9 @@ public class GameManager : MonoBehaviour
         Instantiate(CoinPrefab, new Vector3(Random.Range(-8, 8), 7, 0), Quaternion.identity);
     }
 
-    void CreateShield()
+    void CreatePowerUp()
     {
-        Instantiate(ShieldPrefab, new Vector3(Random.Range(-8, 8), 7, 0), Quaternion.identity);
+        Instantiate(PowerUpPrefab, new Vector3(Random.Range(-8, 8), 7, 0), Quaternion.identity);
     }
 
     public void GameOver()
@@ -60,5 +63,9 @@ public class GameManager : MonoBehaviour
     {
         score = score + scoreToAdd;
         scoreText.text = "score: " + score;
+    }
+    public void ActivateShield()
+    {
+        Shield.SetActive(true);
     }
 }

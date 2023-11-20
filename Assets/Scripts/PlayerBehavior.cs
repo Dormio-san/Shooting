@@ -21,6 +21,9 @@ public class PlayerBehavior : MonoBehaviour
     public int Lives;
     public TextMeshProUGUI lifeText;
 
+    [SerializeField]
+    private GameObject Shield;
+
     // Start is called before the first frame update
     void Start()
     {

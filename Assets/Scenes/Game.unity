@@ -594,6 +594,7 @@ MonoBehaviour:
   BulletPrefab: {fileID: 6655074183052524431, guid: 3dfdf642b95f44115905e0c9e7a1e023, type: 3}
   Lives: 0
   lifeText: {fileID: 0}
+  Shield: {fileID: 0}
 --- !u!61 &1065864995
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -741,10 +742,11 @@ MonoBehaviour:
   EnemyOnePrefab: {fileID: 7496859743628959043, guid: 8a117eb6b7de64daf95cca851d86b191, type: 3}
   EnemyTwoPrefab: {fileID: 7496859743628959043, guid: aaf12adf2e1ef4c2b81614b5e469b598, type: 3}
   CoinPrefab: {fileID: 7496859743628959043, guid: ccaf85d0f10df45e5aca6096a11b7dcf, type: 3}
-  ShieldPrefab: {fileID: 7496859743628959043, guid: b7bb7ad143b5c402e8fdd9243acbee64, type: 3}
+  PowerUpPrefab: {fileID: 7496859743628959043, guid: b7bb7ad143b5c402e8fdd9243acbee64, type: 3}
   scoreText: {fileID: 891571244}
   livesText: {fileID: 2125449083}
   score: 0
+  Shield: {fileID: 2063344560654865039, guid: 367450e689ca0464c837291a2ac52b6a, type: 3}
 --- !u!1 &2125449082
 GameObject:
   m_ObjectHideFlags: 0
