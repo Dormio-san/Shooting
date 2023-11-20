@@ -22,7 +22,7 @@ public class PlayerBehavior : MonoBehaviour
     public TextMeshProUGUI lifeText;
 
     [SerializeField]
-    private GameObject Shield;
+    private GameObject shield;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +34,7 @@ public class PlayerBehavior : MonoBehaviour
         bottomScreen = -2.5f;
         Debug.Log(Lives);
         lifeText = GameObject.Find("GameManager").GetComponent<GameManager>().livesText;
-        lifeText.text = "lives:" + Lives;
+        lifeText.text = "lives: " + Lives;
     }
 
     // Update is called once per frame; if your computer runs at 60 fps
@@ -49,7 +49,7 @@ public class PlayerBehavior : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
         transform.Translate(new Vector3(horizontalInput, verticalInput, 0) * Time.deltaTime * speed);
-        if (transform.position.x > horizontalScreenLimit || transform.position.x < -horizontalScreenLimit)
+        if (transform.position.x > horizontalScreenLimit)
         {
             transform.position = new Vector3(-horizontalScreenLimit, transform.position.y, 0);
         }
@@ -82,7 +82,7 @@ public class PlayerBehavior : MonoBehaviour
     {
         Lives--;
         Debug.Log(Lives);
-        lifeText.text = "lives:" + Lives;
+        lifeText.text = "lives: " + Lives;
         // lives -= 1;
         //lives = lives - 1;
         if (Lives <= 0)
@@ -106,6 +106,6 @@ public class PlayerBehavior : MonoBehaviour
     }
     public void ActivateShield()
     {
-        Shield.SetActive(true);
+        shield.SetActive(true);
     }
 }

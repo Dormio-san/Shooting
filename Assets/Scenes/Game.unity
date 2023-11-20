@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571337, b: 0.3069219, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -600,7 +600,7 @@ MonoBehaviour:
   BulletPrefab: {fileID: 6655074183052524431, guid: 3dfdf642b95f44115905e0c9e7a1e023, type: 3}
   Lives: 0
   lifeText: {fileID: 0}
-  Shield: {fileID: 2063344560654865039, guid: 367450e689ca0464c837291a2ac52b6a, type: 3}
+  shield: {fileID: 1833738338}
 --- !u!61 &1065864995
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -763,10 +763,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shield
       objectReference: {fileID: 0}
-    - target: {fileID: 2063344560654865039, guid: 367450e689ca0464c837291a2ac52b6a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2063344560654865264, guid: 367450e689ca0464c837291a2ac52b6a, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -813,6 +809,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 367450e689ca0464c837291a2ac52b6a, type: 3}
+--- !u!1 &1833738338 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2063344560654865039, guid: 367450e689ca0464c837291a2ac52b6a, type: 3}
+  m_PrefabInstance: {fileID: 1744592057}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2125449082
 GameObject:
   m_ObjectHideFlags: 0

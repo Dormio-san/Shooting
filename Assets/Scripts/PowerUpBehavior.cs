@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class PowerUpBehavior : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject shield;
+    private GameObject plyr;
     // Start is called before the first frame update
     void Start()
     {
-        
+        plyr = GameObject.Find("Player");
     }
 
     // Update is called once per frame
@@ -29,7 +28,7 @@ public class PowerUpBehavior : MonoBehaviour
     {    
         if(whatIHit.tag == "Player")
         {
-            shield.SetActive(true);
+            plyr.GetComponent<PlayerBehavior>().ActivateShield();
             Destroy(this.gameObject);
         }
     }

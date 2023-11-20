@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: -4253946975855118043}
   - component: {fileID: 3418647225936758121}
   - component: {fileID: 7825223031440503554}
-  - component: {fileID: -6271566517126800702}
   - component: {fileID: 3301652394533895023}
   m_Layer: 0
   m_Name: EnemyTwo
@@ -96,19 +95,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-6271566517126800702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7496859743628959043}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cae18320f006945ee83a30ec75aa512f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explosionPrefab: {fileID: 3435687088055616659, guid: dd9bae4e891424abc9e27a59489581a8, type: 3}
 --- !u!212 &3301652394533895023
 SpriteRenderer:
   m_ObjectHideFlags: 0
