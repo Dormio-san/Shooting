@@ -4,7 +4,7 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - Shield: {fileID: 2063344560654865039, guid: 367450e689ca0464c837291a2ac52b6a, type: 3}
+  - shield: {fileID: 2063344560654865039, guid: 367450e689ca0464c837291a2ac52b6a, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
