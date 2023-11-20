@@ -14,16 +14,13 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI livesText;
     public int score;
 
-    [SerializeField]
-    private GameObject Shield;
-
     // Start is called before the first frame update
     void Start()
     {
         InvokeRepeating("CreateEnemyOne", 1.0f, 3.0f);
         InvokeRepeating("CreateEnemyTwo", 2.0f, 5.0f);
         InvokeRepeating("CreateCoin", 1.0f, 15.0f);
-        InvokeRepeating("CreatePowerUp", 3.0f, 30.0f);
+        InvokeRepeating("CreatePowerUp", 3.0f, 3.0f);
         score = 0;
         scoreText.text = "score: " + score;
     }
@@ -63,9 +60,5 @@ public class GameManager : MonoBehaviour
     {
         score = score + scoreToAdd;
         scoreText.text = "score: " + score;
-    }
-    public void ActivateShield()
-    {
-        Shield.SetActive(true);
     }
 }

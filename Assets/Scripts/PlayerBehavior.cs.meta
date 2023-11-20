@@ -6,6 +6,7 @@ MonoImporter:
   defaultReferences:
   - BulletPrefab: {fileID: 6655074183052524431, guid: 3dfdf642b95f44115905e0c9e7a1e023, type: 3}
   - lifeText: {instanceID: 0}
+  - Shield: {fileID: 2063344560654865039, guid: 367450e689ca0464c837291a2ac52b6a, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
