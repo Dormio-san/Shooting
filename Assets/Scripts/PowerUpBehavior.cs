@@ -27,7 +27,7 @@ public class PowerUpBehavior : MonoBehaviour
     {    
         if(whatIHit.tag == "Player")
         {
-            GameObject.Find("GameManager").GetComponent<GameManager>().ActivateShield();
+            GameObject.Find("Player").GetComponent<PlayerBehavior>().ActivateShield();
             Destroy(this.gameObject);
         }
     }

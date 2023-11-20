@@ -10,6 +10,7 @@ MonoImporter:
   - PowerUpPrefab: {fileID: 7496859743628959043, guid: b7bb7ad143b5c402e8fdd9243acbee64, type: 3}
   - scoreText: {instanceID: 0}
   - livesText: {instanceID: 0}
+  - Shield: {fileID: 2063344560654865039, guid: 367450e689ca0464c837291a2ac52b6a, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
